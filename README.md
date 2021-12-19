@@ -45,11 +45,6 @@ You can find the complete and functional app here:
 -  [Twitter](https://twitter.com/AshaAbdullahi13)
 -  [Linkedin](https://www.linkedin.com/in/ashaabdullahi/)
 
-
-## Credits
-
-Thanks to [Gregoire Vella and others on Behance](https://www.behance.net/muratk) for his awesome design work. I based my work on  [this](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign) design.
-
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
