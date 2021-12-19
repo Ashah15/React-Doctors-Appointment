@@ -5,7 +5,7 @@ import navClasses from '../styles/navbar.module.scss';
 import hambBlack from '../img/hamb-black.png';
 import fb from '../img/facebook.png';
 import twitter from '../img/twitter.png';
-import google from '../img/google.png';
+import google from '../img/google.jpg';
 import pinterest from '../img/pinterest.png';
 import vimeo from '../img/vimeo.png';
 import { checkToken } from '../helpers/token';
