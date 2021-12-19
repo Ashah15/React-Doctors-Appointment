@@ -13,7 +13,7 @@ const Catch404 = props => {
 
   return (
     <div className={tempMenus.tempMenu}>
-      <h2>There is nothing here</h2>
+      <h2>Oop!!! nothing is here</h2>
       <br />
       <p className={tempMenus.text}>You will be redirected back in 1.5 seconds</p>
       <p>error: 404 Not Found</p>
