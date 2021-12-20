@@ -67,12 +67,12 @@ class Signup extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   authToken: state.auth.authToken,
 });
 
-const mapDispatchToProps = dispatch => ({
-  signUpCall: data => dispatch(signUpCall(data)),
+const mapDispatchToProps = (dispatch) => ({
+  signUpCall: (data) => dispatch(signUpCall(data)),
 });
 
 Signup.propTypes = {

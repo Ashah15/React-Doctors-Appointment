@@ -42,26 +42,26 @@ export function getDoctorError(error) {
 }
 
 export function getDoctors(token) {
-  return dispatch => {
+  return (dispatch) => {
     dispatch(requestDoctors());
     return axios.get(`${DEV_URL}/v1/doctors`, {
       headers: { Authorization: `Bearer ${token}` },
-    }).then(response => {
+    }).then((response) => {
       dispatch(receiveDoctors(response.data));
-    }).catch(error => {
+    }).catch((error) => {
       dispatch(receiveDoctorsError(error));
     });
   };
 }
 
 export function fetchDoctor(id, token) {
-  return dispatch => {
+  return (dispatch) => {
     dispatch(getDoctor());
     return axios.get(`${DEV_URL}/v1/doctors/${id}`, {
       headers: { Authorization: `Bearer ${token}` },
-    }).then(response => {
+    }).then((response) => {
       dispatch(getDoctorSuccess(response.data));
-    }).catch(error => {
+    }).catch((error) => {
       dispatch(getDoctorError(error));
     });
   };

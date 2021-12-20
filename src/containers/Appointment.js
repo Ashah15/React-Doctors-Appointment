@@ -85,7 +85,7 @@ export class Appointment extends Component {
             name="date"
             className={`${appClasses.datePicker} ${appClasses.input} `}
             selected={date}
-            onChange={date => this.handleDateChange(date)}
+            onChange={(date) => this.handleDateChange(date)}
             showTimeSelect
             timeFormat="HH:mm"
             timeIntervals={60}
@@ -100,12 +100,12 @@ export class Appointment extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   authToken: state.auth.authToken,
   appointments: state.appointments.appointments,
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   postappointment: (token, data) => dispatch(postappointmentCall(token, data)),
 });
 

@@ -10,7 +10,7 @@ export const checkToken = () => {
   return true;
 };
 
-export const saveToken = token => {
+export const saveToken = (token) => {
   const NOW = Date.now();
 
   const tokenObj = {

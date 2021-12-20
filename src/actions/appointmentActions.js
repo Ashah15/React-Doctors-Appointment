@@ -42,20 +42,20 @@ export function getAppointmentsError(error) {
 }
 
 export function appointmentCall(token) {
-  return dispatch => {
+  return (dispatch) => {
     dispatch(getAppointments());
     return axios.get(`${DEV_URL}/v1/appointments`, {
       headers: { Authorization: `Bearer ${token}` },
-    }).then(response => {
+    }).then((response) => {
       dispatch(getAppointmentsSuccess(response.data));
-    }).catch(error => {
+    }).catch((error) => {
       dispatch(getAppointmentsError(error));
     });
   };
 }
 
 export function postappointmentCall(token, data) {
-  return dispatch => {
+  return (dispatch) => {
     dispatch(postAppointment());
     return axios.post(`${DEV_URL}/v1/appointments`,
       data,
@@ -64,9 +64,9 @@ export function postappointmentCall(token, data) {
           Authorization: `Bearer ${token}`,
         },
       })
-      .then(response => {
+      .then((response) => {
         dispatch(setAppointments(response.data));
-      }).catch(error => {
+      }).catch((error) => {
         dispatch(postAppointmentError(error));
       });
   };

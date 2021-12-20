@@ -85,14 +85,14 @@ export class Doctor extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   currentDoctor: state.doctors.currentDoctor,
   authToken: state.auth.authToken,
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   fetchDoctor: (id, token) => dispatch(fetchDoctor(id, token)),
-  setToken: token => dispatch(setToken(token)),
+  setToken: (token) => dispatch(setToken(token)),
 });
 
 Doctor.propTypes = {

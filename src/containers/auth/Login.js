@@ -66,12 +66,12 @@ class Login extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   message: state.auth.message,
   fetching: state.auth.fetching,
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   loginCall: (email, password) => dispatch(loginCall(email, password)),
 });
 

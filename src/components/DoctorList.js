@@ -43,7 +43,7 @@ export class DoctorList extends Component {
         <div className={doctorClasses.prevButton}>
           <span>&lt;</span>
         </div>
-        {doctors.map(doctor => (
+        {doctors.map((doctor) => (
           <div key={doctor.id} className={doctorClasses.doctorDiv}>
             <Link to={`/doctors/${doctor.id}`}>
               <img className={doctorClasses.doctorImage} src={doctor.img} alt="Doctor profile" />
@@ -66,16 +66,16 @@ export class DoctorList extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   doctors: state.doctors.list,
   fetching: state.fetching,
   authToken: state.auth.authToken,
 });
 
-const mapDispatchToProps = dispatch => ({
-  getDoctors: token => dispatch(getDoctors(token)),
-  receiveDoctors: response => dispatch(receiveDoctors(response.data)),
-  setToken: token => dispatch(setToken(token)),
+const mapDispatchToProps = (dispatch) => ({
+  getDoctors: (token) => dispatch(getDoctors(token)),
+  receiveDoctors: (response) => dispatch(receiveDoctors(response.data)),
+  setToken: (token) => dispatch(setToken(token)),
 });
 
 DoctorList.propTypes = {

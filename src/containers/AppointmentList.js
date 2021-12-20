@@ -56,7 +56,7 @@ export class AppointmentList extends Component {
         <div className={appClasses.bgImage} />
         <h1 className={appClasses.mainTitle}>Your Appointments:</h1>
         <div className={appClasses.appointmentsDiv}>
-          {appointments.map(appointment => (
+          {appointments.map((appointment) => (
             <ul className={appClasses.appointment} key={appointment.id}>
               <li className={`${appClasses.doctor} ${appClasses.appointItem}`}>
                 Doctor:
@@ -78,15 +78,15 @@ export class AppointmentList extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   authToken: state.auth.authToken,
   appointments: state.appointments.list,
   fetching: state.appointments.fetching,
   doctors: state.doctors.list,
 });
 
-const mapDispatchToProps = dispatch => ({
-  appointmentCall: token => dispatch(appointmentCall(token)),
+const mapDispatchToProps = (dispatch) => ({
+  appointmentCall: (token) => dispatch(appointmentCall(token)),
 });
 
 AppointmentList.propTypes = {

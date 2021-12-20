@@ -49,12 +49,12 @@ export function receiveSignUpError(error) {
 }
 
 export function loginCall(loginInfo) {
-  return dispatch => {
+  return (dispatch) => {
     dispatch(requestLogin);
     const data = axios.post(`${PROD_URL}/auth/login`, loginInfo)
-      .then(response => {
+      .then((response) => {
         dispatch(receiveLogin(response.data.auth_token));
-      }).catch(error => {
+      }).catch((error) => {
         dispatch(receiveLoginError(error.message));
       });
     return data;
@@ -62,12 +62,12 @@ export function loginCall(loginInfo) {
 }
 
 export function signUpCall(signUpInfo) {
-  return dispatch => {
+  return (dispatch) => {
     dispatch(requestSignUp);
     return axios.post(`${PROD_URL}/signup`, signUpInfo)
-      .then(response => {
+      .then((response) => {
         dispatch(receiveSignUp(response.data.auth_token));
-      }).catch(error => {
+      }).catch((error) => {
         dispatch(receiveSignUpError(error.message));
       });
   };

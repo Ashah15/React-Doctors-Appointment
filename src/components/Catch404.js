@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import tempMenus from '../styles/tempMenus.module.scss';
 
-const Catch404 = props => {
+const Catch404 = (props) => {
   const { history } = props;
 
   const redirect = () => {
